@@ -1,1 +1,3 @@
-# Mechanical Turk Presentation for BCS XYZ
+MTurkBCS512
+
+Guest lecture on using Mechanical Turk for MTan's methods class
