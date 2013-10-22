@@ -153,13 +153,20 @@ layout: false
 # Agenda
 
 --
-1. Introduction
+1. What Is Mechanical Turk?
 
 --
-2. Markdown formatting
+2. How Does It Work?
 
----
-# Introduction
+--
+3. What Can You Do With It?
+
+--
+4. Problems And Shortcomings
+
+--
+5. Existing Experiments
+
 
 ---
 .left-column[
@@ -200,29 +207,66 @@ name: howwork
 
 ---
 template: howwork
+name: HIT
 .right-column[
  ## The unit of work is called a HIT (Human Intelligence Test)
 ]
 
 --
 .right-column[
-  A HIT is effectively a single webpage with a task .footnote[Amazon also calls it a question]
+  
+  * A HIT is effectively a single webpage with a task .red[*]
+]
+
+.footnote[.red.bold[*]Amazon also calls it a question]
+
+---
+template: HIT
+.right-column[
+
+ * Requesters:
+   - Create HITs
+   
+   - Post them to Mechanical Turk
+   
+   - Review work from Workers
+   
+   - Pay for satisfactory work
 ]
 
 ---
+template: HIT
+.right-column[
+
+  * Workers:
+    - Browse available HITs
+    
+    - Select a HIT of interest to them
+    
+    - Work on it
+    
+    - Submit it when they have completed the task
+    
+]
+
+---
+name: whatdo
 .left-column[
  ## What can you do with it?
 ]
 
+--
 .right-column[
- blah blah
+Short answer: Pretty much anything that you can stick in a web browser
 ]
 
----
-# Sandbox
+--
+.right-column[
+(And that is growing every day!)
+]
 
----
-# External Questions
+???
+Note canvas, getUserMedia, WebAudio APIs coming up
 
 ---
 # Qualifications
@@ -234,10 +278,80 @@ template: howwork
 # Bonus
 
 ---
-# Problems
+# Problems and Shortcomings
+
+--
+1. Only have inclusion criteria, not exclusion
+
+???
+Refer back to Qualifications
+
+--
+2. No means for list balancing
+
+???
+We'll get to dealing with that in a second
+
+---
+.left-column[
+## Built in templates
+]
+
+.right-column[
+Amazon provides some built in task templates that let you fill some variables from a spreadsheet
+]
+
+???
+Pop out to https://requester.mturk.com/create/projects/new
+
+--
+.right-column[
+You can also create simple HITs with the "Other" template
+]
+
+--
+.right-column[
+But these are generally not powerful enough for what we need to do
+]
+
+--
+.right-column[
+This is where External Questions come into play
+]
+
+---
+.left-column[
+## External Questions
+]
+
+.right-column[
+]
+
+---
+# Sandbox
 
 ---
 # RSRB
+
+---
+# Experiments that have been done
+
+---
+# Frameworks for making it easier
+
+ * psiTurk
+ * PyJS (neé Pyjamas)
+
+---
+#License
+
+.left-column[
+[![Creative Commons License](http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)
+]
+
+.right-column[   
+This work by Andrew Watts is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US)
+]
 
     </textarea>
     <script src="remark-0.5.6.min.js" type="text/javascript">
