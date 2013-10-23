@@ -268,14 +268,6 @@ Short answer: Pretty much anything that you can stick in a web browser
 ???
 Note canvas, getUserMedia, WebAudio APIs coming up
 
----
-# Qualifications
-
----
-# Payment
-
----
-# Bonus
 
 ---
 # Problems and Shortcomings
@@ -320,27 +312,143 @@ This is where External Questions come into play
 ]
 
 ---
+name: extq
 .left-column[
 ## External Questions
 ]
 
+--
 .right-column[
+With External Questions, you host the HIT on your own server
+]
+
+--
+.right-column[
+Advantages:
+
+  * Full control
+]
+
+--
+.right-column[
+Disadvantages:
+
+  * You have to keep your server up and responding properly to HIT requests
 ]
 
 ---
-# Sandbox
+template:extq
+.right-column[
+The script you host must accept 3 parameters
+
+  * workerId
+  * hitId
+  * assignmentId
+]
+
+--
+.right-column[
+The client side HTML must contain a form that at minimum submits:
+
+  * assignmentId
+  * some other field
+]
 
 ---
-# RSRB
+template:extq
+.right-column[
+Server side script can be anything you choose
+
+  * I used to Perl, but long ago switch to Python (currently with Flask or Pyramid)
+  * You could also use Java Servlets, Scala, Clojure, Ruby, etc
+  * You can even have a static HTML page and handle the GET variables with JavaScript (Dave Kleinschmidt does this)
+]
+
+---
+template:extq
+Client side is going to involve some HTML
+
+  * Almost definitely going to involve JavaScript; in my case generally more JS than any other code
+  * Also might involve an embedded applet, e.g. Flash, Java, Silverlight
+
+---
+.left-column[
+## Qualifications
+]
+.right-column[
+ Amazon provides a method of restricting Workers based on meeting qualifications
+ 
+ * Standard built-in qualifications include
+   - % HIT approval
+   - Location
+ 
+ * You can also create your own that a Worker can be granted or has to take a test to acquire
+ * Amazon recently added an "Master" Worker qualifications for certain types of premade templates
+]
+
+---
+# Payment
+
+ * HITs are prefunded via a linked credit card or bank account
+ * Minimum payment is $0.01
+ * After a Worker submits an Assignment, Requester decides whether to accept work and pay
+
+---
+.left-column[
+## Bonus
+]
+.right-column[
+As a carrot to encourage higher quality work or to finish a tedious HIT you can offer bonuses
+
+ * Bonus can be any amount
+ * Can bonus any submitted assignment
+ * Our only use so far was experimenting with trying to get Workers to do more HITs
+   in an experiment we'd broken 2-3 trials into individual HITs.
+]
+
+---
+.left-column[
+## Sandbox
+]
+
+.right-column[
+For development purposes, Amazon also provides a Mechanical Turk Sandbox
+
+  * You have infinite money
+  * But workers aren't actually paid
+  * Otherwise replicates the main MTurk environment
+]
+
+---
+.left-column[
+## RSRB
+]
+.right-column[
+Make sure you have a protocol with RSRB approval beforehand, just like in the lab
+]
 
 ---
 # Experiments that have been done
+Some examples from here at UR:
 
+  * Self Paced Reading
+  * Syntactic alignment (with recorded audio productions)
+  * Audio-visual speech adaptation https://www.hlp.rochester.edu/mturk/mtadapt-demo/
+  * Artificial language learning
+  * Phonetic perception/adaptation
+  * Written recall
+  * Distributional learning (upcoming!)
+  * Rating
+  * Norming
+  * Visual attention (useful field of view task) (Bavelier lab - in prep)
+  * Working memory (multiple object tracking task) (Bavelier lab - in prep)
 ---
 # Frameworks for making it easier
 
- * psiTurk
- * PyJS (neé Pyjamas)
+ * [psiTurk](https://github.com/NYUCCL/psiTurk)
+ * [PyJS](http://pyjs.org/) (neé Pyjamas)
+ * [Qualtrics](http://qualtrics.com/)
+ * [IbexFarm](http://spellout.net/ibexfarm/)
 
 ---
 #License
